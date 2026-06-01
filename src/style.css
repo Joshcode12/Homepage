@@ -1,0 +1,29 @@
+:root {
+  color-scheme: light dark;
+
+  --bg: light-dark(snow, black);
+  --text: light-dark(black, snow);
+}
+
+html {
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+section {
+  scroll-margin-top: 1.5rem;
+}
