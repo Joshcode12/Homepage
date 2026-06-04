@@ -1,8 +1,39 @@
 :root {
   color-scheme: light dark;
 
-  --bg: light-dark(snow, black);
-  --text: light-dark(black, snow);
+  /* --- Core Layout Backgrounds --- */
+  /* Main site background */
+  --bg: light-dark(#f4f7fa, #0b0f19);
+  /* Cards, header nav, footer, container blocks */
+  --bg-element: light-dark(#ffffff, #141b2d);
+
+  /* --- Interactive States (Buttons / Nav links) --- */
+  --hover: light-dark(#e1e8f0, #1e2942);
+  /* Accent color used for highlighting critical elements */
+  --primary-accent: light-dark(#0066cc, #3b82f6);
+  --primary-accent-hover: light-dark(#0052a3, #2563eb);
+  --primary-accent-active: light-dark(#003d7a, #1d4ed8);
+
+  /* --- Borders & Dividers --- */
+  /* Subtle lines separating sections/cards */
+  --border: light-dark(#dbe2ef, #222f47);
+  /* High contrast borders or input fields */
+  --border-alt: light-dark(#a3b8cc, #3f567a);
+  /* Clean outline style for keyboard navigation */
+  --focus-ring: light-dark(#0066cc, #3b82f6);
+
+  /* --- Typography --- */
+  /* Page headers (h1, h2, h3) */
+  --text-primary: light-dark(#0f172a, #f8fafc);
+  /* Subtitles, labels, and dates */
+  --text-secondary: light-dark(#475569, #94a3b8);
+  /* Main body / article reading text */
+  --text-paragraph: light-dark(#334155, #cbd5e1);
+
+  /* --- Hyperlinks --- */
+  --link: light-dark(#0066cc, #60a5fa);
+  --link-hover: light-dark(#004b93, #93c5fd);
+  --link-pressed: light-dark(#003366, #2563eb);
 }
 
 html {
@@ -12,7 +43,7 @@ html {
 
 body {
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--text-paragraph);
   transition:
     background-color 0.3s,
     color 0.3s;
@@ -22,8 +53,61 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: var(--bg-element);
+  box-sizing: border-box;
+  border: 4px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.2rem;
 }
 
 section {
-  scroll-margin-top: 1.5rem;
+  scroll-margin-top: 58px;
+  box-sizing: border-box;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  margin: 10px;
+  padding: 10px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:active {
+  color: var(--link-pressed);
+}
+
+button {
+  background-color: var(--bg-element);
+  border: solid var(--border-alt);
+  color: var(--text-primary);
+}
+
+button:hover {
+  background-color: var(--hover);
+}
+
+button:focus-visible {
+  outline: solid var(--focus-ring);
+}
+
+footer {
+  background-color: var(--bg-element);
+  box-sizing: border-box;
+  border: 4px solid var(--border);
+  border-radius: 8px;
+  padding: 5px;
 }

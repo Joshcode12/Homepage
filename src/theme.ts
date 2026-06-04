@@ -1,4 +1,5 @@
 const savedTheme = localStorage.getItem("theme");
+
 if (savedTheme) {
   document.documentElement.style.colorScheme = savedTheme;
 }
@@ -11,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const newMode = currentMode.includes("dark") ? "light" : "dark";
 
     document.documentElement.style.colorScheme = newMode;
-
     localStorage.setItem("theme", newMode);
   });
 });
