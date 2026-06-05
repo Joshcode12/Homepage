@@ -3,13 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <title>Joshua Profile</title>
     <link rel="stylesheet" href="/src/style.css" />
-    <script type="module" src="/src/theme.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
     <header>
       <nav aria-label="Main Navigation">
+        <input type="checkbox" id="nav-toggle" hidden />
+        <label for="nav-toggle" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </label>
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
@@ -18,7 +23,7 @@
           <a href="#education">Education</a>
           <a href="#links">Links</a>
         </div>
-        <button id="toggle-theme" aria-label="Theme Toggle">Theme</button>
+        <button id="toggle-theme" aria-label="Theme Toggle"></button>
       </nav>
     </header>
 
@@ -28,7 +33,35 @@
           <h1>Joshua Ellis</h1>
           <p class="subtitle">Computer Engineering Technologist</p>
         </div>
-        <h2>About</h2>
+
+        <h2>About Me</h2>
+        <div class="about-content">
+          <p>
+            I am a versatile
+            <strong>Computer Engineering Technologist</strong> with a passion
+            for building, securing, and optimizing interconnected systems.
+            Graduating with a diploma from the
+            <em>Northern Alberta Institute of Technology (NAIT)</em>, I have
+            intentionally kept my technical footprint broad rather than
+            narrowing my focus to a single domain.
+          </p>
+          <p>
+            My expertise bridges the gap between hardware architecture and
+            high-level software development. On any given day, I am equally
+            comfortable designing low-level bare-metal firmware for
+            microcontrollers, engineering custom PCB layouts, configuring
+            containerized environments, or managing local network
+            infrastructure.
+          </p>
+          <p>
+            As a natural problem solver and a dedicated generalist, I enjoy
+            analyzing complex systems from the hardware level to the software
+            deployment pipeline. I thrive on learning new technologies quickly,
+            finding elegant engineering solutions, and ensuring that physical
+            components and software infrastructure communicate securely and
+            seamlessly.
+          </p>
+        </div>
       </section>
 
       <section id="skills">
@@ -85,7 +118,7 @@
             <h3>Network & Communication</h3>
             <ul>
               <li>Network Infrastructure & Protocols</li>
-              <li>Serial Communication (I2C, SPI, UART)</li>
+              <li>Serial Communication (I2C, SPI, UART, RS-232 / RS-485)</li>
               <li>Service Isolation & Security</li>
             </ul>
           </div>
@@ -94,11 +127,56 @@
 
       <section id="projects">
         <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Chat Application</h3>
+            <p class="project-tech">
+              Rust • TypeScript • Docker / Podman • PostgreSQL • object storage
+            </p>
+            <p class="project-description">
+              Architected a full-stack messaging platform featuring secure
+              peer-to-peer and group messaging, file transfers, and robust
+              JWT-based user authentication. Designed a containerized deployment
+              architecture utilizing a PostgreSQL database, Garage object
+              storage, and an Nginx + Traefik + Cloudflare tunnel to securely
+              serve the frontend assets.
+            </p>
+            <a
+              href="https://github.com/Joshcode12/ChatApp"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View on GitHub →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <h3>Music Player</h3>
+            <p class="project-tech">C • STM32 HAL • SPI / SDIO</p>
+            <p class="project-description">
+              Engineered a real-time hardware music player interfacing an STM32
+              microcontroller with a VS1053 audio decoder. Developed low-level
+              drivers to stream audio data from an SD card over SPI and
+              implemented dynamic runtime playback controls, volume adjustments,
+              and a custom mathematical tracking algorithm to calculate audio
+              duration accurately.
+            </p>
+            <a
+              href="https://github.com/Joshcode12/MusicPlayer"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View on GitHub →
+            </a>
+          </article>
+        </div>
       </section>
 
       <section id="experience">
         <h2>Experience</h2>
-
+        <h3>I have not relevant experience yet.</h3>
         <!--<article class="job">
           <h3>Title</h3>
           <p class="company">
@@ -156,7 +234,5 @@
         Joshua Ellis
       </p>
     </footer>
-
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

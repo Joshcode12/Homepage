@@ -49,9 +49,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text-paragraph);
-  font-family:
-    system-ui,
-    sans-serif;
+  font-family: system-ui, sans-serif;
   transition:
     background-color 0.3s,
     color 0.3s;
@@ -87,6 +85,67 @@ nav {
 .nav-links {
   display: flex;
   gap: 1.5rem;
+}
+
+/* --- Hamburger Menu --- */
+#nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+#nav-hamburger:hover {
+  background-color: var(--hover);
+}
+
+#nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+
+/* Animate to X when open */
+#nav-toggle:checked ~ label#nav-hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#nav-toggle:checked ~ label#nav-hamburger span:nth-child(2) {
+  opacity: 0;
+}
+#nav-toggle:checked ~ label#nav-hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 640px) {
+  #nav-hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    order: 3; /* push below the nav row */
+  }
+
+  #nav-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.75rem 0.25rem;
+    border-top: 1px solid var(--border);
+  }
 }
 
 /* --- Sections --- */
@@ -136,6 +195,53 @@ h3 {
   color: var(--text-primary);
 }
 
+/* --- About Section Styling --- */
+.hero-header {
+  padding: 3rem 0 2rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.hero-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.about-content {
+  max-width: 750px;
+  margin: 1.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-paragraph);
+  text-align: left;
+}
+
+.about-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.about-content em {
+  color: var(--primary-accent);
+  font-style: normal;
+  font-weight: 500;
+}
+
 /* --- Skills Grid --- */
 .skills-grid {
   display: grid;
@@ -163,6 +269,45 @@ ul {
   left: 0;
 }
 
+/* --- Projects Grid --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background-color: var(--bg-element);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-tech {
+  font-size: 0.85rem;
+  color: var(--primary-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: var(--text-paragraph);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.project-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
 /* --- Interactive Elements --- */
 a {
   color: var(--link);
@@ -179,24 +324,27 @@ a:active {
   color: var(--link-pressed);
 }
 
-button {
-  background-color: var(--bg-element);
-  border: 1px solid var(--border-alt);
+#toggle-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
   color: var(--text-primary);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 50%;
   cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
-button:hover {
+#toggle-theme:hover {
   background-color: var(--hover);
 }
 
-button:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
+#toggle-theme svg {
+  display: block;
 }
 
 /* --- Footer --- */
