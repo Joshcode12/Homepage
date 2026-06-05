@@ -10,13 +10,14 @@
   <body>
     <header>
       <nav aria-label="Main Navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#links">Links</a>
-
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#links">Links</a>
+        </div>
         <button id="toggle-theme" aria-label="Theme Toggle">Theme</button>
       </nav>
     </header>
@@ -28,128 +29,121 @@
           <p class="subtitle">Computer Engineering Technologist</p>
         </div>
         <h2>About</h2>
-        <p>
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-          <br />
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-        </p>
       </section>
 
       <section id="skills">
         <h2>Skills</h2>
-        <p>
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-          <br />
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-        </p>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <ul>
+              <li>C</li>
+              <li>C#</li>
+              <li>Rust</li>
+              <li>Python</li>
+              <li>PHP</li>
+              <li>JavaScript / TypeScript</li>
+              <li>HTML / CSS</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools & Infrastructure</h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>Docker / Podman</li>
+              <li>Linux CLI</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Embedded Systems</h3>
+            <ul>
+              <li>Bare-Metal Development</li>
+              <li>Hardware Abstraction Layer (HAL)</li>
+              <li>STM32 Microcontrollers</li>
+              <li>ESP32 Microcontrollers</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Hardware & Electronics</h3>
+            <ul>
+              <li>PCB Design & Schematic Capture</li>
+              <li>Circuit Design & Troubleshooting</li>
+              <li>Hardware Architecture</li>
+              <li>Digital & Analog Electronics</li>
+              <li>
+                Test Equipment (Oscilloscopes, Multimeters, Signal Generators,
+                Power Supplies)
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Network & Communication</h3>
+            <ul>
+              <li>Network Infrastructure & Protocols</li>
+              <li>Serial Communication (I2C, SPI, UART)</li>
+              <li>Service Isolation & Security</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section id="projects">
         <h2>Projects</h2>
-        <p>
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-          <br />
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-        </p>
       </section>
 
       <section id="experience">
         <h2>Experience</h2>
-        <p>
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-          <br />
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-        </p>
+
+        <!--<article class="job">
+          <h3>Title</h3>
+          <p class="company">
+            Company Name | <time datetime="2024">2024</time> — Present
+          </p>
+          <ul>
+            <li>Point.</li>
+            <li>Point.</li>
+          </ul>
+        </article>-->
       </section>
 
       <section id="education">
         <h2>Education</h2>
-        <p>
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-          <br />
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-        </p>
+
+        <article class="degree">
+          <h3>Diploma in Computer Engineering Technology</h3>
+          <p class="school">
+            Northern Alberta Institute of Technology (NAIT) |
+            <time datetime="2023">2023</time> —
+            <time datetime="2025">2025</time>
+          </p>
+        </article>
       </section>
 
       <section id="links">
         <h2>Links</h2>
-        <p>
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-          <br />
-          Maecenas egestas quis magna at pretium. In sed placerat lectus. Aenean
-          ullamcorper diam vitae elit volutpat tempus. Duis consequat, ante ac
-          tincidunt faucibus, metus odio accumsan dolor, molestie facilisis
-          dolor erat sit amet nunc. Ut ultrices ex non lacus eleifend, sit amet
-          rhoncus nisl dignissim. Aliquam lacinia, dui non lobortis consectetur,
-          turpis tellus iaculis magna, ut dignissim turpis nisl vitae dui. Sed
-          sed massa ac ligula fringilla imperdiet.
-        </p>
+        <ul class="links-list">
+          <li>
+            <a
+              href="https://github.com/Joshcode12"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/joshuaslellis/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
       </section>
     </main>
 
