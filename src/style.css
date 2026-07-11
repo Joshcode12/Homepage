@@ -1,6 +1,14 @@
 :root {
   color-scheme: light dark;
 
+  &[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  &[data-theme="dark"] {
+    color-scheme: dark;
+  }
+
   /* --- Core Layout Backgrounds --- */
   /* Main site background */
   --bg: light-dark(#f4f7fa, #0b0f19);
