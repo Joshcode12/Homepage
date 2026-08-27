@@ -1,3 +1,5 @@
+import { initProjects } from "./projects";
+
 const toggleBtn = document.getElementById(
   "toggle-theme",
 ) as HTMLButtonElement | null;
@@ -30,3 +32,6 @@ toggleBtn?.addEventListener("click", () => {
   currentTheme = currentTheme === "dark" ? "light" : "dark";
   applyTheme(currentTheme);
 });
+
+// Initialize dynamic project fetching
+initProjects();
